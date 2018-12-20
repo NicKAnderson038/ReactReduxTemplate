@@ -33,8 +33,12 @@
 }
 
 .link:hover {
-  color: lightblue;
-  border: 1px solid lightblue;
+  color: brown;
+  border: 1px solid brown;
+}
+
+.link-flex{
+  display:flex;
 }
 
 @keyframes App-logo-spin {

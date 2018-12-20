@@ -1,0 +1,15 @@
+.btn {
+    background-color: aliceblue;
+    color: darkblue;
+    padding: 10px 5px 10px 5px;
+    margin: 4px;
+}
+
+.btnflex{
+    display: inline-flex;
+}
+
+.number{
+    color:brown;
+    padding: 4px 4px;
+}

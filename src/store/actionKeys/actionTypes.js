@@ -1,2 +1,2 @@
-export const FIRST = "FIRST";
-export const SECOND = "SECOND";
+export const ADD = "ADD";
+export const SUBTRACT = "SUBTRACT";

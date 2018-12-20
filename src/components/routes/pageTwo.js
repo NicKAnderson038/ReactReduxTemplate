@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import List from "../List/List"
 
 class PageTwo extends Component {
   render() {
     return (
-      <div>
-        <h1>Page Two</h1>
-      </div>
+      <React.Fragment>
+        <List/>
+      </React.Fragment>
     )
   }
 }
