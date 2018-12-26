@@ -4,8 +4,7 @@ import initialState from './initialState/initialState'
 
 
 const fetchData = (state, action) => {
-    console.log(`C% test data`, 'color:blue;')
-    console.log(action.fetchResult)
+    console.log(`C% TEST DATA`, 'color:blue;')
     const updatedState = {
       data: action.fetchResult
     };

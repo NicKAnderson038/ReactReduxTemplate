@@ -25,7 +25,7 @@ class Counter extends Component {
 
 const mapStateToProps = state => {
   return {
-    count: state.firstResult.count
+    count: state.firstReducer.count
   };
 };
 

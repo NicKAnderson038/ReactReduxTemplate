@@ -6,8 +6,8 @@ import firstReducer from "./reducers/first";
 import secondReducer from "./reducers/second";
 
 const rootReducer = combineReducers({
-  firstResult: firstReducer,
-  secondResult: secondReducer
+      firstReducer,
+      secondReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

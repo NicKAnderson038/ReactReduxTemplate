@@ -31,7 +31,7 @@ class List extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.secondResult.data
+    data: state.secondReducer.data
   };
 };
 
