@@ -1,14 +1,5 @@
 import * as actionTypes from "../actionKeys/actionTypes";
 
-
-  
-// export const fetchData = val => {
-//     return {
-//       type: actionTypes.FETCHDATA,
-//       subtractResult: val
-//     };
-// };
-
 const networkHelper = val => {
     return {
       type: actionTypes.FETCHDATA,
@@ -17,16 +8,29 @@ const networkHelper = val => {
 };
 
 export const fetchData = () => {
-    return dispatch => {
-      fetch("https://jsonplaceholder.typicode.com/todos")
-        .then((res)=>res.json())
-        .then((data) => {
-            console.log(data)
-          dispatch(networkHelper(data));
-        })
-        .catch(error => {
-          dispatch(networkHelper([]));
-          console.error(error);
-        });
+    return async (dispatch) => {
+        try {
+            const res = await fetch("https://jsonplaceholder.typicode.com/todos")
+            const data = await res.json()
+            dispatch(networkHelper(data))
+        } catch (error) {
+            dispatch(networkHelper([]));
+            console.error(error);
+        }
     };
-  };
+};
+
+// export const fetchData = () => {
+//     return dispatch => {
+//       fetch("https://jsonplaceholder.typicode.com/todos")
+//         .then((res)=>res.json())
+//         .then((data) => {
+//             console.log(data)
+//           dispatch(networkHelper(data));
+//         })
+//         .catch(error => {
+//           dispatch(networkHelper([]));
+//           console.error(error);
+//         });
+//     };
+// };

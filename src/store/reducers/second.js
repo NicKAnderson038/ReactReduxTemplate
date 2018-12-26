@@ -2,11 +2,6 @@ import * as actionTypes from "../actionKeys/actionTypes";
 import { updateObject } from "../util/utility";
 import initialState from './initialState/initialState'
 
-// const initialState = {
-//   count: 0
-// };
-
-
 
 const fetchData = (state, action) => {
     console.log(`C% test data`, 'color:blue;')
