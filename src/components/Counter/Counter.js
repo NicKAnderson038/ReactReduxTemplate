@@ -31,10 +31,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAdd: ingName =>
-      dispatch(actionCreators.add(ingName)),
-    onSubtract: ingName =>
-      dispatch(actionCreators.subtract(ingName))
+    onAdd: val =>
+      dispatch(actionCreators.add(val)),
+    onSubtract: val =>
+      dispatch(actionCreators.subtract(val))
   };
 };
 
