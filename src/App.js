@@ -5,6 +5,7 @@ import './App.css';
 import { Route, Link } from "react-router-dom";
 import PageOne from "./components/routes/pageOne"
 import PageTwo from "./components/routes/pageTwo"
+import PageThree from "./components/routes/pageThree"
 // END
 class App extends Component {
   render() {
@@ -16,10 +17,13 @@ class App extends Component {
            {/* BEGIN */}
            <div className="link-flex"> 
           <Link className="link" to="/">
-            Page One
+            Page 1
           </Link>
           <Link className="link" to="/second-page">
-            Page Two
+            Page 2
+          </Link>
+          <Link className="link" to="/third-page">
+            Page 3
           </Link>
           </div>
            {/* END */}
@@ -28,6 +32,7 @@ class App extends Component {
         <main>
           <Route exact path="/" component={PageOne} />
           <Route exact path="/second-page" component={PageTwo} />
+          <Route exact path="/third-page" component={PageThree} />
         </main>
         {/* END */}
       </div>
