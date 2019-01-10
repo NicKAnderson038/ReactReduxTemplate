@@ -1,33 +1,42 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PickupCardDetails from './PickupCardDetails/PickupCardDetails'
+class PickupCardTime extends Component {
+    state = {
+        toggle: false
+    }
 
-const pickupCardTime = props => {
+render(){
     let newProps = null
-    const data = props.deliveryTimes.map((d,i)=>{
+    const data = this.props.deliveryTimes.map((d,i)=>{
         return(
                  <button key={`buttonKey-${i}`}>{d.pickupTime}</button>
         )
     })
 
-    const onToggle = (bool) =>{
+    const onToggle = (e, bool) =>{
         if(newProps){
             newProps = false
         }else{
            newProps = bool
         }
-        return newProps
+        // return newProps
+
+        this.setState({
+            toggle: newProps
+        })
     }
 
-    
-
+    const bool = {...this.state.toggle}
   return (
     <div>
       {data}
-      <button onClick={()=> onToggle(true)}>
-        <PickupCardDetails showDetail={props} showToggle={newProps}/>
+      <button onClick={(event)=> onToggle(event, true)}>
+        <PickupCardDetails showDetail={this.props} changed={bool}/>
         </button>
     </div>
-  )
+  
+      )
+    }
 }
 
-export default pickupCardTime
+export default PickupCardTime
