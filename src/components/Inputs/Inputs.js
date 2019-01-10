@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import Input from '../UI/Input/Input'
 
 class Inputs extends Component {
   render() {
     return (
-      <div>
-        <h1>Inputs</h1>
-      </div>
+      <React.Fragment>
+        <Input/>
+      </React.Fragment>
+        
     )
   }
 }
