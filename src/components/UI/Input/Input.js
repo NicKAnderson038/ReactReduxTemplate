@@ -6,7 +6,7 @@ const input  = (props) => {
     // generic input wrapper    
     let inputElement = null;
 
-    switch(props.inputElement){
+    switch(props.inputtype){
         case ('input'):
             inputElement = <input className={classes.InputElement} {...props}/>
             break

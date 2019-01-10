@@ -5,8 +5,10 @@ class Inputs extends Component {
   render() {
     return (
       <React.Fragment>
-        <Input inputType="input" type="text"/>
-        <Input inputType="textarea" type="textarea"/>
+        <form>
+            <Input inputtype="input" type="text"/>
+            <Input inputtype="textarea" type="textarea"/>
+        </form>
       </React.Fragment>
         
     )
