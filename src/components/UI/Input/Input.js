@@ -1,7 +1,7 @@
 import React from 'react'
 import * as classes from './Input.module.css'
 
-const input  = (props) => {
+const input = (props) => {
     
     // generic input wrapper    
     let inputElement = null;

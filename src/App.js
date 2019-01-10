@@ -6,6 +6,7 @@ import { Route, Link } from "react-router-dom";
 import PageOne from "./components/routes/pageOne"
 import PageTwo from "./components/routes/pageTwo"
 import PageThree from "./components/routes/pageThree"
+import Pickup from "./components/routes/pickup"
 // END
 class App extends Component {
   render() {
@@ -25,6 +26,9 @@ class App extends Component {
           <Link className="link" to="/third-page">
             Page 3
           </Link>
+          <Link className="link" to="/pickup-page">
+            Pickup
+          </Link>
           </div>
            {/* END */}
         </header>
@@ -33,6 +37,7 @@ class App extends Component {
           <Route exact path="/" component={PageOne} />
           <Route exact path="/second-page" component={PageTwo} />
           <Route exact path="/third-page" component={PageThree} />
+          <Route exact path="/pickup-page" component={Pickup} />
         </main>
         {/* END */}
       </div>

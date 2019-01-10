@@ -1,0 +1,27 @@
+.Wrapper{
+    width: 100%;
+    text-align: -webkit-center;
+}
+.Main{
+    border: 1px solid grey;
+    max-width: 300px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Card{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    max-width: 300px; 
+    
+    height: 40px;
+}
+
+h6{
+    font-size:  12px;
+}
+
+.Buttons{
+    display: flex;
+}

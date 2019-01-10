@@ -4,10 +4,12 @@ import thunk from "redux-thunk";
 /* Import Reducers */
 import firstReducer from "./reducers/first";
 import secondReducer from "./reducers/second";
+import dateTimeReducer from './reducers/dateTime'
 
 const rootReducer = combineReducers({
       firstReducer,
-      secondReducer
+      secondReducer,
+      dateTimeReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

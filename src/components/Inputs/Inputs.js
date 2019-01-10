@@ -69,11 +69,9 @@ class Inputs extends Component {
         })
     }
 
-
     return (
       <React.Fragment>
         <form>
-           
             {formElementArray.map(formElement => (
                 <Input
                     key={formElement.id}
