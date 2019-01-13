@@ -28,7 +28,6 @@ render(){
       {data}
       <button onClick={(event)=> onToggle(event)}>Show All</button>
         <PickupCardDetails showDetail={this.props} changed={this.state.toggle}/>
-        {/* </button> */}
     </div>
   
       )
