@@ -6,33 +6,29 @@ class PickupCardTime extends Component {
     }
 
 render(){
-    let newProps = null
+   
     const data = this.props.deliveryTimes.map((d,i)=>{
         return(
                  <button key={`buttonKey-${i}`}>{d.pickupTime}</button>
         )
     })
 
-    const onToggle = (e, bool) =>{
-        if(newProps){
-            newProps = false
-        }else{
-           newProps = bool
-        }
-        // return newProps
-
+    const onToggle = (e) =>{
+        console.log('NEWPROPS', this.state.toggle)
+        let boolSwitch;
+        this.state.toggle? boolSwitch = false : boolSwitch = true;
+        
         this.setState({
-            toggle: newProps
+            toggle: boolSwitch
         })
     }
 
-    const bool = {...this.state.toggle}
   return (
     <div>
       {data}
-      <button onClick={(event)=> onToggle(event, true)}>
-        <PickupCardDetails showDetail={this.props} changed={bool}/>
-        </button>
+      <button onClick={(event)=> onToggle(event)}>Show All</button>
+        <PickupCardDetails showDetail={this.props} changed={this.state.toggle}/>
+        {/* </button> */}
     </div>
   
       )
